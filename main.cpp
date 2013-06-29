@@ -1,9 +1,14 @@
 #include <iostream>
+#include <fstream>
+
 using namespace std;
 
 const int MaxSize = 32;
+const int MaxMapName = 20;
+
 int N;
 char A[MaxSize][MaxSize];
+char mapName[MaxMapName];
 
 void initMatrix(char Name[]) {
 	ifstream fin(Name);
@@ -15,9 +20,9 @@ void initMatrix(char Name[]) {
 }
 
 int main() {
-	
+	cout << "Enter the name of the sample map: "; cin >> mapName;
+	initMatrix(mapName);
 }
-
 
 
 
